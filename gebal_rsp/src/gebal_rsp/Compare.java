@@ -137,12 +137,12 @@ public class Compare {
 	
 //김규호
 	public void gameRate() {
-		Date date = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy 년 MM 월dd 일");
+		Date date = new Date(); //현재 날짜 가져오기
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy 년 MM 월dd 일"); //날짜를 "yyyy 년 MM 월 dd 일" 형식으로 포맷
 		String toDayFormat = sdf.format(date);
-		double result = ((double) userWin / (double) ((comWin + userWin + draw))) * 100;
+		double result = ((double) userWin / (double) ((comWin + userWin + draw))) * 100; // 승률을 백분율로 계산
 		System.out.println(toDayFormat + " 전적 : 승 (" + userWin + ") 패 (" + comWin + ") 무승부 : (" + draw + ") 승률 ("
-				+ (int) result + "%)");
+				+ (int) result + "%)"); //결과 출력
 
 	}
 
