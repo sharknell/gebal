@@ -25,7 +25,7 @@ public class Compare {
 		flag = true;
 	}
 
-	public void compare() throws Exception {
+	public void compare() {
 		String userVal = "";
 		String comVal = "";
 		Random random = new Random();
@@ -73,12 +73,12 @@ public class Compare {
 				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!");
 				comWin++;
 				System.out.println(userWin);
-				contin();
+				sc.nextInt();
 			} else {
 				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : User Win!!");
 				userWin++;
 				System.out.println(userWin);
-				contin();
+				sc.nextInt();
 			}
 
 		} else if ((this.user < this.com) && (this.user < 4 && this.user > 0)) {
@@ -86,23 +86,23 @@ public class Compare {
 				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : User Win!!");
 				userWin++;
 				System.out.println(comWin);
-				contin();
+				sc.nextInt();
 			} else {
 
 				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!");
 				comWin++;
 				System.out.println(comWin);
-				contin();
+				sc.nextInt();
 			}
 
 		} else if ((this.user == this.com) && (this.user < 4 && this.user > 0)) {
 			System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Draw!!");
 			draw++;
-			contin();
+			sc.nextInt();
 		} else if (this.user >= 4 || this.user <= 0) {
 
 			System.out.println("잘못된 값을 입력하셨습니다.");
-			contin();
+			sc.nextInt();
 
 		}
 	}

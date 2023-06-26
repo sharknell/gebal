@@ -20,7 +20,7 @@ public class Regist {
 		flag = true;
 	}
 
-	public void email() throws Exception {
+	public void email() {
 
 		System.out.println("이메일을 입력해주세요.");
 		email = sc.nextLine();
@@ -64,7 +64,7 @@ public class Regist {
 		}
 	}// email 검증 메소드 끝
 
-	public void login() throws Exception {
+	public void login() {
 		int ch;
 
 		while (flag) { // 제어자 flag를 이용한 반복문
@@ -84,7 +84,7 @@ public class Regist {
 
 						// 로그인 성공 시 game 시작
 						System.out.println("1. 게임시작 2. 전적확인 3. 나가기");
-						int ch1 = Integer.parseInt(sc.nextLine());
+						int ch1 = sc.nextInt();
 						int com = Random.comNum();
 						switch (ch1) {
 						case 1:
