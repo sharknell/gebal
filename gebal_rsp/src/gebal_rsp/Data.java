@@ -2,7 +2,7 @@ package gebal_rsp;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//이교진
 public class Data {
 	private String id, server;
 

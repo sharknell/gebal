@@ -4,7 +4,7 @@ package gebal_rsp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+//이교진
 public class Regist {
 	Scanner sc = new Scanner(System.in);
 	String email;
@@ -63,7 +63,9 @@ public class Regist {
 			email = sc.nextLine();
 		}
 	}// email 검증 메소드 끝
-
+	
+	
+//이승민
 	public void login() {
 		int ch;
 

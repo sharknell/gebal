@@ -1,7 +1,7 @@
 package gebal_rsp;
 
 import java.util.Scanner;
-
+//김규호
 public class GameMain {
 
 	public static void main(String[] args) {

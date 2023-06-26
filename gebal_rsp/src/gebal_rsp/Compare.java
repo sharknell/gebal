@@ -4,6 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+
+//백승현, 이도형
 public class Compare {
 	int user;
 	int com;
@@ -131,7 +133,9 @@ public class Compare {
 			}
 		}
 	}
-
+	
+	
+//김규호
 	public void gameRate() {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy 년 MM 월dd 일");
