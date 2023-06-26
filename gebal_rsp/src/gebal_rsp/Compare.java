@@ -29,6 +29,8 @@ public class Compare {
 		String userVal = "";
 		String comVal = "";
 		Random random = new Random();
+		UserVsCom uCom = new UserVsCom();
+				
 
 		System.out.println("1 or 가위 2 or 바위 3 or 보");
 
@@ -65,9 +67,10 @@ public class Compare {
 			comVal = "바위";
 		} else if (this.com == 3) {
 			comVal = "보";
-
 		}
-
+		uCom.compare();
+		}
+/*
 		if ((this.user > this.com) && (this.user < 4 && this.user > 0)) {
 			if (this.com == 1 && this.user == 3) {
 				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!");
@@ -107,7 +110,7 @@ public class Compare {
 		}
 	}
 
-	public void contin() throws Exception {
+	public void contin() {
 		int ch;
 		while (flag) {
 			System.out.println("게임을 계속 하시겠습니까 ?\n1. 재시작 2. 전적확인 3.종료");
@@ -125,7 +128,7 @@ public class Compare {
 			}
 		}
 	}
-
+*/
 	public void gameRate() {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy 년 MM 월dd 일");
