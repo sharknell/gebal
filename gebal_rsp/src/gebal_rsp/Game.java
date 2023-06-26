@@ -5,15 +5,16 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 class Game {
-    static int cumwin = 0;
-    static int userwin = 0;
-    static int draw = 0;
+    static int cumwin = 0; //컴퓨터값 
+    static int userwin = 0; //유저(플레이어값)
+    static int draw = 0; //무승부
     static Scanner sc = new Scanner(System.in);
+    //입력값 받기 위한 객체
 
     public static void startGame() {
         System.out.println("가위 1 /바위 2 / 보 3 중 하나를 입력해주세요");
         String[] input = {"가위", "바위", "보" };
-        String str = sc.next();
+        String str = sc.next(); //next() 사용자로부터 데이터값을 입력하기 위한
         int userNum = 0;
         if (str.equals("가위") || str.equals("1")) {
             userNum = 1;
