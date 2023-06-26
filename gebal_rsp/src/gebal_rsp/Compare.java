@@ -29,8 +29,6 @@ public class Compare {
 		String userVal = "";
 		String comVal = "";
 		Random random = new Random();
-		UserVsCom uCom = new UserVsCom();
-				
 
 		System.out.println("1 or 가위 2 or 바위 3 or 보");
 
@@ -67,45 +65,50 @@ public class Compare {
 			comVal = "바위";
 		} else if (this.com == 3) {
 			comVal = "보";
+
 		}
-		uCom.compare();
-		}
-/*
+
 		if ((this.user > this.com) && (this.user < 4 && this.user > 0)) {
 			if (this.com == 1 && this.user == 3) {
-				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!");
+				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!" + "\nEnter를 누르세요");
 				comWin++;
 				System.out.println(userWin);
-				sc.nextInt();
+				sc.nextLine();
+				contin();
 			} else {
-				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : User Win!!");
+				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : User Win!!" + "\nEnter를 누르세요");
 				userWin++;
 				System.out.println(userWin);
-				sc.nextInt();
+				sc.nextLine();
+				contin();
 			}
 
 		} else if ((this.user < this.com) && (this.user < 4 && this.user > 0)) {
 			if (this.user == 1 && this.com == 3) {
-				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : User Win!!");
+				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : User Win!!" + "\nEnter를 누르세요");
 				userWin++;
 				System.out.println(comWin);
-				sc.nextInt();
+				sc.nextLine();
+				contin();
 			} else {
 
-				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!");
+				System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Computer Win!!" + "\nEnter를 누르세요");
 				comWin++;
 				System.out.println(comWin);
-				sc.nextInt();
+				sc.nextLine();
+				contin();
 			}
 
 		} else if ((this.user == this.com) && (this.user < 4 && this.user > 0)) {
-			System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Draw!!");
+			System.out.println("User  : " + userVal + "\nCompter: " + comVal + "\n결과 : Draw!!" + "\nEnter를 누르세요");
 			draw++;
-			sc.nextInt();
+			sc.nextLine();
+			contin();
 		} else if (this.user >= 4 || this.user <= 0) {
 
 			System.out.println("잘못된 값을 입력하셨습니다.");
-			sc.nextInt();
+			sc.nextLine();
+			contin();
 
 		}
 	}
@@ -128,7 +131,7 @@ public class Compare {
 			}
 		}
 	}
-*/
+
 	public void gameRate() {
 		Date date = new Date();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy 년 MM 월dd 일");
