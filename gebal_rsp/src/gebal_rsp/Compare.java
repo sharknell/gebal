@@ -1,9 +1,8 @@
 package gebal_rsp;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Compare {
 	int user;
@@ -14,7 +13,7 @@ public class Compare {
 
 	boolean flag;
 
-	BufferedReader br;
+	Scanner sc = new Scanner(System.in);
 
 	public Compare() {
 
@@ -23,7 +22,6 @@ public class Compare {
 		userWin = 0;
 		comWin = 0;
 		draw = 0;
-		br = new BufferedReader(new InputStreamReader(System.in));
 		flag = true;
 	}
 
@@ -34,7 +32,7 @@ public class Compare {
 
 		System.out.println("1 or 가위 2 or 바위 3 or 보");
 
-		String userInput = br.readLine();
+		String userInput = sc.nextLine();
 
 		if (userInput.equals("가위") || userInput.equals("1")) {
 			this.user = 1;
@@ -113,7 +111,7 @@ public class Compare {
 		int ch;
 		while (flag) {
 			System.out.println("게임을 계속 하시겠습니까 ?\n1. 재시작 2. 전적확인 3.종료");
-			ch = Integer.parseInt(br.readLine());
+			ch = Integer.parseInt(sc.nextLine());
 			if (ch == 1) {
 				compare();
 			} else if (ch == 2) {

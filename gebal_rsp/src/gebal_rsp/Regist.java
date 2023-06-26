@@ -1,12 +1,12 @@
 package gebal_rsp;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Regist {
-	BufferedReader br;
+	Scanner sc = new Scanner(System.in);
 	String email;
 	Data data;
 	boolean flag; // while 반복문 제어자
@@ -17,14 +17,13 @@ public class Regist {
 
 	public Regist() { // 회원가입 생성자
 		datas = new ArrayList<>();
-		br = new BufferedReader(new InputStreamReader(System.in));
 		flag = true;
 	}
 
 	public void email() throws Exception {
 
 		System.out.println("이메일을 입력해주세요.");
-		email = br.readLine();
+		email = sc.nextLine();
 
 		while (true) { // 이메일 @ 포함 검증
 			if (email.contains("@")) {
@@ -61,7 +60,7 @@ public class Regist {
 
 			// 다시 입력 받기
 			System.out.println("이메일을 입력하세요");
-			email = br.readLine();
+			email = sc.nextLine();
 		}
 	}// email 검증 메소드 끝
 
@@ -73,19 +72,19 @@ public class Regist {
 			String id;
 			String serverString;
 			System.out.println("ID(email 앞 부분) 을 입력해주세요.");
-			id = br.readLine();
+			id = sc.nextLine();
 			for (int i = 0; i < datas.size(); i++) { // id 검증
 				if (id.equals(datas.get(i).getId())) {
 					System.out.println("ID : " + id);
 					System.out.println("Server( 도메인 ) 을 입력해주세요.");
-					serverString = br.readLine();
+					serverString = sc.nextLine();
 					if (serverString.equals(datas.get(i).getServer())) { // server 검증
 						System.out.println("Server : " + serverString);
 						System.out.println("로그인 성공\n ID : " + id + "\nServer : " + serverString);
 
 						// 로그인 성공 시 game 시작
 						System.out.println("1. 게임시작 2. 전적확인 3. 나가기");
-						int ch1 = Integer.parseInt(br.readLine());
+						int ch1 = Integer.parseInt(sc.nextLine());
 						int com = Random.comNum();
 						switch (ch1) {
 						case 1:

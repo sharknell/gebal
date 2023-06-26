@@ -1,19 +1,18 @@
 package gebal_rsp;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class GameMain {
 
 	public static void main(String[] args) throws Exception {
 
 		Regist regist = new Regist();
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Scanner sc = new Scanner(System.in);
 		int ch;
 
 		while (true) {
 			System.out.println("1. 회원가입 2. 로그인 3. 종료");
-			ch = Integer.parseInt(br.readLine());
+			ch = Integer.parseInt(sc.nextLine());
 			if (ch == 1) {
 				regist.email();
 			} else if (ch == 2) {
