@@ -54,24 +54,26 @@ public class RockSP_N2 {
     }
 
     private static void login() {
-        System.out.print("아이디: ");
-        Scanner sc = new Scanner(System.in);
-        String username = sc.next();
-
         boolean loggedIn = false;
+        while (!loggedIn) {
+            System.out.print("아이디: ");
+            Scanner sc = new Scanner(System.in);
+            String username = sc.next();
 
-        for (User user : Registration.users) {
-            if (user.username.equals(username)) {
-                loggedIn = true;
-                break;
+            for (User user : Registration.users) {
+                if (user.username.equals(username)) {
+                    loggedIn = true;
+                    break;
+                }
+            }
+
+            if (loggedIn) {
+                System.out.println("로그인 성공!");
+                // 로그인에 성공한 후에 실행할 작업을 추가합니다
+            } else {
+                System.out.println("로그인 실패. 아이디를 확인하세요.");
             }
         }
-
-        if (loggedIn) {
-            System.out.println("로그인 성공!");
-            // 로그인에 성공한 후에 실행할 작업을 추가합니다
-        } else {
-            System.out.println("로그인 실패. 아이디를 확인하세요.");
-        }
     }
+
 }

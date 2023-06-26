@@ -7,12 +7,12 @@ import java.util.Scanner;
 class Game {
     static int cumwin = 0;
     static int userwin = 0;
-    static int rateall = 0;
+    static int draw = 0;
     static Scanner sc = new Scanner(System.in);
 
     public static void startGame() {
         System.out.println("가위 1 /바위 2 / 보 3 중 하나를 입력해주세요");
-        String[] rok = { " ", "가위", "바위", "보" };
+        String[] input = {"가위", "바위", "보" };
         String str = sc.next();
         int userNum = 0;
         if (str.equals("가위") || str.equals("1")) {
@@ -31,22 +31,22 @@ class Game {
         if (cumNum > userNum) {
             if (cumNum == 3 && userNum == 1) {
                 userwin++;
-                System.out.println("컴퓨터는 : " + rok[cumNum] + " 당신은 :" + rok[userNum] + " 당신 승");
+                System.out.println("Computer : " + input[cumNum-1] + "\nUser :" + input[userNum-1] + "\n결과 : User 승");
             } else {
                 cumwin++;
-                System.out.println("컴퓨터는 : " + rok[cumNum] + " 당신은 :" + rok[userNum] + " Cum 승");
+                System.out.println("Computer : " + input[cumNum-1] + "\nUser :" + input[userNum-1] + "\n결과 : Computer승");
             }
         } else if (cumNum < userNum) {
             if (cumNum == 1 && userNum == 3) {
                 cumwin++;
-                System.out.println("컴퓨터는 : " + rok[cumNum] + " 당신은 :" + rok[userNum] + " Cum 승");
+                System.out.println("Computer : " + input[cumNum-1] + "\nUser : " + input[userNum-1] + "\n결과 : Computer 승");
             } else {
                 userwin++;
-                System.out.println("컴퓨터는 : " + rok[cumNum] + " 당신은 :" + rok[userNum] + " 당신 승");
+                System.out.println("Computer : " + input[cumNum-1] + "\nUser :" + input[userNum-1] + "\n결과 : User 승");
             }
         } else {
-            rateall++;
-            System.out.println("무승부");
+            draw++;
+            System.out.println("Computer : " + input[cumNum-1] + "\nUser : " + input[userNum-1] + "\n결과 : 무승부");
         }
         gameIng();
     }
@@ -73,8 +73,8 @@ class Game {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy년 MM월 dd일 HH시 mm분");
         String formattedDateTime = now.format(formatter);
-        double result = ((double) userwin / (double) ((cumwin + userwin + rateall))) * 100;
+        double result = ((double) userwin / (double) ((cumwin + userwin + draw))) * 100;
         System.out.println(
-                formattedDateTime + " 전적 : 승(" + userwin + ") 패 (" + cumwin + ") 무승부 : " + rateall + " 승률 (" + (int) result + "% )");
+                formattedDateTime + " 전적 : 승(" + userwin + ") 패 (" + cumwin + ") 무승부 : " + draw + " 승률 (" + (int) result + "% )");
     }
 }
